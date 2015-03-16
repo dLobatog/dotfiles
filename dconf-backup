@@ -1,0 +1,957 @@
+[system/proxy]
+mode='none'
+
+[system/locale]
+region='en_US.utf8'
+
+[org/gnome/Totem]
+show-visualizations=false
+subtitle-encoding='UTF-8'
+active-plugins=['skipto', 'grilo', 'movie-properties', 'media_player_keys', 'screensaver', 'save-file', 'recent', 'screenshot', 'apple-trailers', 'autoload-subtitles', 'vimeo', 'chapters']
+debug=false
+
+[org/gnome/Weather/Application]
+locations=[<(uint32 1, <('Getafe', 'LEGT', true, @m(dd) (0.70336768855371479, -0.064868076350220086), @m(dd) (0.70336768855371479, -0.064868076350220086))>)>, <(uint32 2, <('Leganés', 'LEGT', true, [(0.70391970128953563, -0.065775909360644938)], [(0.70391970128953563, -0.065775909360644938)])>)>]
+
+[org/gnome/Music]
+window-position=[427, 8]
+window-maximized=false
+window-size=[960, 784]
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-battery-type='nothing'
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-timeout=1800
+
+[org/gnome/settings-daemon/plugins/updates]
+last-updates-notification=uint64 1417105356
+
+[org/gnome/settings-daemon/plugins/media-keys]
+logout=''
+screensaver='<Primary><Alt>BackSpace'
+volume-down='AudioLowerVolume'
+
+[org/gnome/settings-daemon/plugins/xsettings]
+antialiasing='rgba'
+hinting='slight'
+
+[org/gnome/settings-daemon/peripherals/touchpad]
+natural-scroll=false
+disable-while-typing=true
+tap-to-click=true
+touchpad-enabled=true
+
+[org/gnome/settings-daemon/peripherals/keyboard]
+numlock-state='on'
+
+[org/gnome/settings-daemon/peripherals/mouse]
+motion-threshold=5
+motion-acceleration=5.4631147540983607
+
+[org/gnome/bijiben]
+window-maximized=false
+default-location='local'
+window-position=[2475, 240]
+use-system-font=true
+window-size=[810, 600]
+color='rgb(239,242,209)'
+font='Cantarell 14'
+
+[org/gnome/calculator]
+target-currency=''
+show-zeroes=false
+source-currency=''
+show-thousands=false
+button-mode='programming'
+target-units='radian'
+word-size=64
+number-format='automatic'
+angle-units='degrees'
+base=10
+source-units='degree'
+accuracy=9
+
+[org/gnome/cheese]
+photo-y-resolution=720
+burst-delay=1000
+video-y-resolution=720
+camera='/dev/video0'
+photo-x-resolution=1280
+video-x-resolution=1280
+
+[org/gnome/clocks/state/window]
+size=(1244, 682)
+state=132
+panel-id='world'
+
+[org/gnome/clocks]
+world-clocks=[{'location': <(uint32 1, <('Tel Aviv', 'LLSD', true, @m(dd) (0.5605076372626584, 0.60706429505960713), @m(dd) (0.55966891929061258, 0.60679280909445943))>)>}, {'location': <(uint32 1, <('London City Airport', 'EGLC', false, @m(dd) (0.89884456477707964, -0.0087266462599716477), @m(dd) (0.89884456477707964, -0.0020362232784242244))>)>}, {'location': <(uint32 1, <('Raleigh', 'KRDU', true, @m(dd) (0.62605930672100707, -1.3750818938070426), @m(dd) (0.62434085553949348, -1.3725027509582006))>)>}, {'location': <(uint32 1, <('San Francisco', 'KSFO', true, @m(dd) (0.65658801258494626, -2.1356672871875406), @m(dd) (0.659296885757089, -2.1366218601153339))>)>}, {'location': <(uint32 1, <('Tokyo International Airport', 'RJTT', false, @m(dd) (0.62046454908398407, 2.4396794002616429), @m(dd) (0.62282074357417661, 2.4391218722853854))>)>}, {'location': <(uint32 1, <('Pune', 'VAPO', true, @m(dd) (-0.32019112325387172, 1.2837088634636014), @m(dd) (0.32340951039454929, 1.2889256525978121))>)>}, {'location': <(uint32 1, <('Beijing', 'ZBAA', true, @m(dd) (0.69696814214530467, 2.0295270260429752), @m(dd) (0.69689057971334611, 2.0313596217575696))>)>}]
+
+[org/gnome/baobab/ui]
+active-chart='rings'
+window-state=132
+window-size=(683, 740)
+
+[org/gnome/empathy]
+sanity-cleaning-number=uint32 4
+
+[org/gnome/empathy/conversation]
+theme='PlanetGNOME'
+theme-variant='Blue'
+spell-checker-enabled=true
+
+[org/gnome/empathy/ui]
+show-groups=false
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(246,237,232)'
+login-shell=true
+palette=['rgb(0,0,0)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+cursor-shape='block'
+use-system-font=false
+use-theme-colors=false
+font='Inconsolata for Powerline Medium 10'
+allow-bold=true
+background-color='rgb(26,24,24)'
+audible-bell=false
+
+[org/gnome/terminal/legacy]
+schema-version=uint32 3
+default-show-menubar=false
+
+[org/gnome/documents]
+window-maximized=true
+
+[org/gnome/desktop/interface]
+text-scaling-factor=1.0
+font-name='Liberation Sans 10'
+document-font-name='Liberation Sans 10'
+toolkit-accessibility=false
+gtk-im-module='ibus'
+clock-show-seconds=false
+cursor-theme='Adwaita'
+icon-theme='Numix-Circle'
+monospace-font-name='Inconsolata Medium 8'
+enable-animations=false
+gtk-theme='Numix'
+clock-show-date=true
+
+[org/gnome/desktop/notifications]
+application-children=['gnome-network-panel', 'synapse', 'abrt-applet', 'skype', 'empathy', 'psensor', 'workrave', 'pidgin', 'vlc', 'steam', 'wine', 'transmission-gtk', 'gnome-bluetooth-panel', 'brasero', 'gnome-software', 'gnome-music', 'rhythmbox', 'tomahawk', 'gnome-abrt', 'deja-dup', 'calibre-gui', 'gnome-tweak-tool', 'gnome-do', 'org-gnome-software', 'org-gnome-nautilus']
+
+[org/gnome/desktop/notifications/application/gnome-software]
+application-id='gnome-software.desktop'
+
+[org/gnome/desktop/notifications/application/empathy]
+application-id='empathy.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/psensor]
+application-id='psensor.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-do]
+application-id='gnome-do.desktop'
+
+[org/gnome/desktop/notifications/application/brasero]
+application-id='brasero.desktop'
+
+[org/gnome/desktop/notifications/application/synapse]
+application-id='synapse.desktop'
+
+[org/gnome/desktop/notifications/application/pidgin]
+application-id='pidgin.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-bluetooth-panel]
+application-id='gnome-bluetooth-panel.desktop'
+
+[org/gnome/desktop/notifications/application/wine]
+application-id='wine.desktop'
+
+[org/gnome/desktop/notifications/application/workrave]
+application-id='workrave.desktop'
+
+[org/gnome/desktop/notifications/application/abrt-applet]
+application-id='abrt-applet.desktop'
+
+[org/gnome/desktop/notifications/application/vlc]
+application-id='vlc.desktop'
+
+[org/gnome/desktop/notifications/application/deja-dup]
+application-id='deja-dup.desktop'
+
+[org/gnome/desktop/notifications/application/transmission-gtk]
+application-id='transmission-gtk.desktop'
+
+[org/gnome/desktop/notifications/application/calibre-gui]
+application-id='calibre-gui.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-tweak-tool]
+application-id='gnome-tweak-tool.desktop'
+
+[org/gnome/desktop/notifications/application/rhythmbox]
+application-id='rhythmbox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-music]
+application-id='gnome-music.desktop'
+
+[org/gnome/desktop/notifications/application/skype]
+application-id='skype.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-abrt]
+application-id='gnome-abrt.desktop'
+
+[org/gnome/desktop/notifications/application/steam]
+application-id='steam.desktop'
+
+[org/gnome/desktop/notifications/application/tomahawk]
+application-id='tomahawk.desktop'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'Sundry']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+translate=true
+categories=['X-GNOME-Utilities']
+apps=['org.gnome.baobab.desktop', 'deja-dup-preferences.desktop', 'eog.desktop', 'evince.desktop', 'org.gnome.FileRoller.desktop', 'gnome-calculator.desktop', 'gnome-dictionary.desktop', 'gnome-disks.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Screenshot.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-terminal.desktop', 'gnome-tweak-tool.desktop', 'gucharmap.desktop', 'seahorse.desktop', 'vinagre.desktop', 'yelp.desktop']
+name='X-GNOME-Utilities.directory'
+
+[org/gnome/desktop/app-folders/folders/Sundry]
+translate=true
+categories=['X-GNOME-Sundry']
+apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+name='X-GNOME-Sundry.directory'
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/backgrounds/images/earth_from_space.jpg'
+color-shading-type='solid'
+primary-color='#FFFFFF'
+lock-delay=uint32 300
+picture-options='stretched'
+lock-enabled=true
+secondary-color='#000000'
+
+[org/gnome/desktop/search-providers]
+sort-order=['gnome-contacts.desktop', 'gnome-documents.desktop', 'nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 0
+
+[org/gnome/desktop/privacy]
+recent-files-max-age=30
+
+[org/gnome/desktop/wm/preferences]
+theme='Numix'
+num-workspaces=4
+titlebar-font='Liberation Sans Bold 10'
+
+[org/gnome/desktop/wm/keybindings]
+toggle-maximized=['<Primary><Alt>7']
+move-to-workspace-up=['<Primary><Shift><Alt>k', '<Control><Shift><Alt>Up']
+switch-to-workspace-left=['<Primary><Alt>h']
+switch-to-workspace-down=['<Primary><Alt>j', '<Control><Alt>Down']
+move-to-workspace-right=['<Primary><Shift><Alt>l']
+switch-to-workspace-right=['<Primary><Alt>l']
+toggle-fullscreen=['']
+move-to-monitor-left=['<Primary><Alt>minus']
+move-to-workspace-left=['<Primary><Shift><Alt>h']
+move-to-monitor-right=['<Primary><Alt>equal']
+move-to-workspace-down=['<Primary><Shift><Alt>j', '<Control><Shift><Alt>Down']
+switch-to-workspace-up=['<Primary><Alt>k', '<Control><Alt>Up']
+
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=false
+
+[org/gnome/desktop/a11y/applications]
+screen-reader-enabled=false
+
+[org/gnome/desktop/datetime]
+automatic-timezone=false
+
+[org/gnome/desktop/background]
+picture-uri='file:///home/daniel/Pictures/Thor4Andreo.jpg'
+show-desktop-icons=false
+color-shading-type='solid'
+primary-color='#000000000000'
+picture-options='zoom'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/input-sources]
+current=uint32 0
+sources=[('xkb', 'us'), ('xkb', 'es'), ('ibus', 'kkc')]
+xkb-options=['caps:swapescape']
+
+[org/gnome/gedit/preferences/ui]
+statusbar-visible=true
+notebook-show-tabs-mode='always'
+show-tabs-mode='auto'
+
+[org/gnome/gedit/plugins/filebrowser]
+virtual-root='file:///tmp'
+tree-view=true
+root='file:///'
+
+[org/gnome/gedit/plugins]
+active-plugins=['modelines', 'filebrowser', 'docinfo', 'spell', 'time']
+
+[org/gnome/gedit/state/window]
+size=(960, 782)
+state=128
+bottom-panel-size=140
+side-panel-size=200
+side-panel-active-page='GeditWindowDocumentsPanel'
+
+[org/gnome/file-roller/listing]
+sort-method='name'
+name-column-width=474
+sort-type='descending'
+list-mode='as-folder'
+show-path=false
+
+[org/gnome/file-roller/dialogs/new]
+default-extension='.tar.gz'
+volume-size=104857
+encrypt-header=false
+
+[org/gnome/file-roller/dialogs/extract]
+skip-newer=false
+recreate-folders=true
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=1052
+window-width=1920
+
+[org/gnome/photos]
+window-maximized=true
+
+[org/gnome/software]
+first-run=false
+check-timestamp=int64 1426480255
+install-timestamp=int64 1425327717
+
+[org/gnome/nautilus/window-state]
+geometry='683x740+29+10'
+maximized=false
+
+[org/gnome/nautilus/list-view]
+default-visible-columns=['name', 'size', 'type', 'date_modified']
+default-column-order=['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'mime_type', 'where']
+
+[org/gnome/shell]
+app-picker-view=uint32 0
+command-history=['r', 'gnome-session-properties', 'r', 'reload', 'refresh', '--replace', 'restart', 'replace', '--replace', 'r', 'replace', 'r']
+enabled-extensions=['workspace-grid@mathematical.coffee.gmail.com', 'temperature@xtranophilist', 'putWindow@clemens.lab21.org', 'bumblebee-indicator@gnome-shell-extensions.majcn.github.com', 'dash-to-dock@micxgx.gmail.com', 'pixel-saver@deadalnix.me', 'activities-config@nls1729', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'system-monitor@paradoxxx.zero.gmail.com', 'openweather-extension@jenslody.de', 'maximus-two@wilfinitlike.gmail.com', 'topIcons@adel.gadllah@gmail.com', 'Launch-And-Expose@xenatt.github.com', 'slingshot@jfarthing84']
+favorite-apps=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'gnome-terminal.desktop', 'pidgin.desktop', 'gvim.desktop']
+
+[org/gnome/shell/calendar]
+show-weekdate=false
+
+[org/gnome/shell/overrides]
+dynamic-workspaces=false
+button-layout=':close'
+workspaces-only-on-primary=false
+
+[org/gnome/shell/extensions/activities-config]
+activities-config-button-no-text=true
+activities-icon-padding=8
+activities-config-button-no-icon=false
+activities-config-button-icon-path='/usr/share/icons/Numix-Circle/scalable/apps/distributor-logo-fedora.svg'
+original-activities-button-text='Activities'
+pointer-barriers-supported=true
+maximized-window-effect=0
+panel-hide-rounded-corners=true
+activities-text-padding=8
+panel-background-color-hex-rgb='#000000'
+transparent-panel=32
+activities-config-button-text='Activities'
+first-enable=false
+
+[org/gnome/shell/extensions/user-theme]
+name='elegance-colors'
+
+[org/gnome/shell/extensions/org-lab21-putwindow]
+put-to-corner-nw=['<Primary><Alt>m']
+put-to-location-enabled=0
+put-to-center-enabled=0
+put-to-side-w=['<Primary><Alt>y']
+put-to-corner-sw=['<Primary><Alt>n']
+put-to-location=['<Primary><Alt>0']
+put-to-corner-ne=['<Primary><Alt>comma']
+put-to-right-screen-enabled=1
+put-to-left-screen-enabled=1
+put-to-side-e=['<Primary><Alt>o']
+put-to-left-screen=['<Primary><Alt>minus']
+put-to-right-screen=['<Primary><Alt>equal']
+put-to-corner-se=['<Primary><Alt>period']
+put-to-side-n=['<Primary><Alt>i']
+put-to-side-s=['<Primary><Alt>u']
+
+[org/gnome/shell/extensions/system-monitor]
+battery-show-text=true
+icon-display=false
+disk-graph-width=55
+move-clock=false
+battery-hidesystem=false
+compact-display=false
+disk-show-text=false
+net-show-text=false
+net-graph-width=55
+memory-graph-width=55
+memory-show-text=false
+disk-show-menu=false
+cpu-graph-width=55
+disk-display=true
+cpu-show-text=false
+
+[org/gnome/shell/extensions/sensors]
+main-sensor='Core 1'
+update-time=60
+
+[org/gnome/shell/extensions/openweather]
+pressure-unit='atm'
+wind-speed-unit='kph'
+days-forecast=2
+position-in-panel='center'
+unit='celsius'
+actual-city=1
+city='3118594>Leganes (ES) && 293397>Tel Aviv (IL)'
+
+[org/gnome/shell/extensions/weather]
+position-in-panel='center'
+city=[<(uint32 1, <('Madrid', 'LEVS', true, @m(dd) (0.70482212377927922, -0.066031617549354618), @m(dd) (0.70511301780570912, -0.0642862882973603))>)>]
+
+[org/gnome/shell/extensions/slingshot]
+screen-resolution='1920x1080'
+
+[org/gnome/shell/extensions/workspace-grid]
+max-screen-fraction=0.63
+num-columns=2
+show-workspace-labels=false
+
+[org/gnome/shell/extensions/dash-to-dock]
+show-apps-at-top=false
+extend-height=true
+dock-fixed=false
+intellihide=true
+show-delay=0.14999999999999999
+animation-time=0.14999999999999999
+hide-delay=0.14999999999999999
+autohide=true
+apply-custom-theme=false
+show-favorites=true
+height-fraction=0.96999999999999997
+show-running=true
+background-opacity=0.55000000000000004
+dash-max-icon-size=48
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/gnome/eog/ui]
+sidebar=false
+
+[org/gnome/nm-applet/eap]
+39a35bf6-e069-4562-b0a6-a76f98a2598aignore-phase2-ca-cert=false
+a77807e0-1ce2-400f-84a5-5399b9abc1fdignore-ca-cert=true
+a77807e0-1ce2-400f-84a5-5399b9abc1fdignore-phase2-ca-cert=false
+39a35bf6-e069-4562-b0a6-a76f98a2598aignore-ca-cert=false
+
+[org/gnome/brasero/plugins/dvd-rw-format]
+priority=0
+
+[org/gnome/brasero/plugins/dvdauthor]
+priority=0
+
+[org/gnome/brasero/plugins/image-checksum]
+priority=0
+
+[org/gnome/brasero/plugins/audio2cue]
+priority=0
+
+[org/gnome/brasero/plugins/file-checksum]
+priority=0
+
+[org/gnome/brasero/plugins/libisofs]
+priority=0
+
+[org/gnome/brasero/plugins/cdrdao]
+priority=0
+
+[org/gnome/brasero/plugins/burn-uri]
+priority=0
+
+[org/gnome/brasero/plugins/normalize]
+priority=0
+
+[org/gnome/brasero/plugins/file-downloader]
+priority=0
+
+[org/gnome/brasero/plugins/genisoimage]
+priority=0
+
+[org/gnome/brasero/plugins/growisofs]
+priority=0
+
+[org/gnome/brasero/plugins/readcd]
+priority=0
+
+[org/gnome/brasero/plugins/readom]
+priority=0
+
+[org/gnome/brasero/plugins/cdrecord]
+priority=0
+
+[org/gnome/brasero/plugins/transcode]
+priority=0
+
+[org/gnome/brasero/plugins/transcode2vob]
+priority=0
+
+[org/gnome/brasero/plugins/cdda2wav]
+priority=0
+
+[org/gnome/brasero/plugins/wodim]
+priority=0
+
+[org/gnome/brasero/plugins/libburn]
+priority=0
+
+[org/gnome/brasero/plugins/dvdcss]
+priority=0
+
+[org/gnome/brasero/plugins/mkisofs]
+priority=0
+
+[org/gnome/brasero/plugins/vcdimager]
+priority=0
+
+[org/gnome/brasero/drives/drive-2748174602/disc-4]
+speed=11080
+flags=64
+
+[org/gnome/brasero/drives/drive-2748174602/image-4]
+speed=11080
+flags=64
+
+[org/gnome/brasero/display]
+iso-folder='/run/media/daniel/a1f084be-d79d-4120-a3c6-1bd3ff8369b4/[WII]Dragon Ball Z Budokai Tenkaichi 3[CUSTOM][PAL][ESPALWII.com]'
+
+[org/gnome/evince/default]
+window-ratio=(1.6223277909738718, 1.2436974789915967)
+continuous=true
+fullscreen=false
+show-sidebar=true
+dual-page-odd-left=false
+inverted-colors=false
+sidebar-page='thumbnails'
+sidebar-size=170
+dual-page=false
+sizing-mode='fit-width'
+
+[org/gnome/deja-dup]
+periodic=true
+backend='file'
+last-run='2015-02-12T10:57:02.638324Z'
+nag-check='2014-12-22T12:24:11.412572Z'
+prompt-check='2014-09-11T11:26:03.841233Z'
+last-backup='2015-02-12T10:57:02.638324Z'
+delete-after=182
+
+[org/gnome/deja-dup/s3]
+folder='localhost.localdomain'
+
+[org/gnome/deja-dup/u1]
+folder='/deja-dup/localhost.localdomain'
+
+[org/gnome/deja-dup/rackspace]
+container='localhost.localdomain'
+
+[org/gnome/deja-dup/file]
+short-name='LIVE'
+uuid='5966-F0BF'
+icon='. GThemedIcon drive-harddisk-usb drive-harddisk drive'
+relpath=b'Backups'
+name='WDC WD6400BPVT-80HXZT3: LIVE'
+type='volume'
+
+[org/gnome/gnome-system-monitor]
+show-dependencies=false
+current-tab='resources'
+maximized=false
+show-whose-processes='user'
+window-state=(700, 500, 687, 270)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[org/gnome/libgnomekbd/preview]
+width=1464
+height=614
+x=240
+y=135
+
+[org/gnome/meld]
+window-size=(400, 400)
+insert-spaces-instead-of-tabs=false
+window-state='maximized'
+draw-spaces=@as []
+indent-width=8
+
+[org/gnome/gnome-screenshot]
+include-pointer=false
+include-border=false
+border-effect='none'
+delay=3
+last-save-directory='file:///home/daniel/Pictures/survey'
+
+[org/gnome/maps]
+last-location-description='Gral. Moscardo - Basilica'
+last-location-user-set=true
+last-location=[40.448600402893724, -3.6972353502642363, 0.0]
+window-maximized=true
+
+[org/gnome/GWeather]
+distance-unit='km'
+temperature-unit='centigrade'
+speed-unit='kph'
+pressure-unit='atm'
+
+[org/gtk/settings/file-chooser]
+sort-column='name'
+sidebar-width=148
+window-position=(1911, 197)
+show-size-column=true
+show-hidden=true
+window-size=(830, 720)
+sort-order='ascending'
+location-mode='path-bar'
+
+[org/gtk/settings/color-chooser]
+selected-color=(true, 0.10196078431372549, 0.094117647058823528, 0.094117647058823528, 1.0)
+custom-colors=[(0.10196078431372549, 0.094117647058823528, 0.094117647058823528, 1.0), (0.20000000000000001, 0.40000000000000002, 0.80000000000000004, 1.0), (0.0, 0.0, 0.0, 0.80000000000000004), (0.96333333333333337, 0.93112981614708246, 0.90874444444444447, 1.0), (0.10000000000000001, 0.093333333333333338, 0.093333333333333338, 1.0), (0.056666666666666671, 0.048733333333333344, 0.048733333333333344, 1.0)]
+
+[org/virt-manager/virt-manager/vmlist-fields]
+network-traffic=false
+disk-usage=false
+
+[org/virt-manager/virt-manager]
+manager-window-height=546
+manager-window-width=487
+
+[org/virt-manager/virt-manager/paths]
+image-default='/home/daniel/Downloads'
+media-default='/run/media/daniel/a1f084be-d79d-4120-a3c6-1bd3ff8369b4/Images'
+
+[org/virt-manager/virt-manager/details]
+show-toolbar=true
+
+[org/virt-manager/virt-manager/new-vm]
+graphics-type='system'
+
+[org/virt-manager/virt-manager/confirm]
+delete-storage=false
+removedev=false
+interface-power=true
+unapplied-dev=true
+forcepoweroff=false
+
+[org/virt-manager/virt-manager/vms/f5faebca44c641f992f7029a84582018]
+vm-window-size=(1920, 1080)
+
+[org/virt-manager/virt-manager/vms/449088dcaf664c46a6e50bcaf9248792]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/721173889e19429f9e09afa176d27fb6]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/3b8d8e871770433b8dd21f13605a6e82]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/332d0ccf7bac414aa7f2b716f618dc35]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/566b9fb1dc6f4edf834faa3746257818]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/1a0cf7a978f64728bdbf1b01ba77c7e6]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/bac8e823c1cf410c803960e8989442ee]
+vm-window-size=(1543, 979)
+
+[org/virt-manager/virt-manager/vms/21a5029f60364df489468e367d5eb575]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/0df7441dfc09453abb7ee18c36f22834]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/8bf6b4f817c64f318253af143b93094c]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/22f964bd2c514bb5acda274ba4e4e4c9]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/9dbd1a2154d645458784fe33b1ec962b]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/30f92bd0b9b245b09003e550db7779e6]
+vm-window-size=(664, 716)
+scaling=2
+
+[org/virt-manager/virt-manager/vms/dc1cf5eae7774923ab741edcd0130c54]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/c815b0092e6249beaae0e4bccf62c3f7]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/53e2aa398e8641b38de64e916db93af0]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/84caf93eb78d4b26a0424f99c1df7dfd]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/a17df9e681634d2a9b5e24d831a47643]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/5ce7ed1af2064c13b21b997d4af6bec9]
+vm-window-size=(1366, 742)
+
+[org/virt-manager/virt-manager/vms/bcf4787e3ac7458ab88a93ddf945c0d2]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/c912925a8028441fbaf78e5261d8a71c]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/80ddcf66d6f548d38958a5db5b7659cc]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/f380dcf4adfd4d51bbec02fe2f5f3b31]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/180bf181ca1745fabbe33d539e4b1695]
+vm-window-size=(1366, 740)
+
+[org/virt-manager/virt-manager/vms/b5c3452c9f50428b9d30862ee4397ba5]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/cdab749f95ca4af4b4b6f52207bf2b5d]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/f809735e45ed41b5a434a17486565390]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/707aba7ebdfc4488ab708edd07173d85]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/73b00347ac9c4cdfb01ed2f2ca5271b0]
+vm-window-size=(1304, 737)
+
+[org/virt-manager/virt-manager/vms/9f7dc0c5895f449e9a5d33284b0ed2c7]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/8a67e10bf8d34397a534dc0d6cdda6b1]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/2c47849b571c4010ad8cdba86349a02c]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/0c4b59a70a4440b485abedd9d87ece5e]
+vm-window-size=(958, 1025)
+
+[org/virt-manager/virt-manager/vms/d237ce33e5204ec3a2987d447915c91e]
+vm-window-size=(1046, 719)
+
+[org/virt-manager/virt-manager/vms/f508d06c33084aadb1c7ce1a8cd1025b]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/7fd2cfc325bd48eb8b464fdb0ac35947]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/9a003482f2294125983b4a400930cca9]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/e86ef0914e504455b130e3ac7a7e5058]
+vm-window-size=(1366, 742)
+
+[org/virt-manager/virt-manager/vms/26897cc8559b424d9a8f6e084c7b950c]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/fb25cea36cb145aaa2a05d544c476270]
+vm-window-size=(954, 1083)
+scaling=2
+
+[org/virt-manager/virt-manager/vms/3c9a2ad9daa94e3f9356a7c94c838893]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/29c5aa0e67ae4d97b26cf314f6c2f692]
+vm-window-size=(1366, 742)
+
+[org/virt-manager/virt-manager/vms/17b58da1b7ac485c897380e4a85a5392]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/27d5a5abf1f54008bea3ebb839585031]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/c4307be729904cf5bc63e7d23bf678a2]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/633748824d8045aab16aab1da6f8798f]
+vm-window-size=(1634, 934)
+scaling=1
+
+[org/virt-manager/virt-manager/vms/a0e1361dba3141b992f12fe4ba9e7b8e]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/e395f1c548444446a0ad7ee558f8d230]
+vm-window-size=(1920, 1052)
+scaling=2
+
+[org/virt-manager/virt-manager/vms/274349fff3c143baa1d88ea21afc3d13]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/8972601996814f14b7558351693fe643]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/9513e4092f674bf8b80c8bc9e3c711d5]
+vm-window-size=(804, 600)
+
+[org/virt-manager/virt-manager/vms/3eddf0db48f042e6befceea50df1aaa1]
+vm-window-size=(1418, 905)
+
+[org/virt-manager/virt-manager/vms/21c5c0e10c134a0b8baab8ec48b78710]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/6f62db3c9cef4b6f882170de7013a4de]
+vm-window-size=(960, 1028)
+scaling=2
+
+[org/virt-manager/virt-manager/vms/fd5f3523cc0145439e06c46c1ee8921d]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/eebae372e83a409e8607b0f8156593b1]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/be570238e3ac40069155e335a89c7475]
+vm-window-size=(681, 739)
+
+[org/virt-manager/virt-manager/vms/2e55406e203c4ce9933751bb1c891a0f]
+vm-window-size=(1366, 742)
+
+[org/virt-manager/virt-manager/vms/669843f6377a442dae9051a53055194d]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/0ba719d8ca914e5a84f47935dda4a0fc]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/a8ab0d46ca144375bc6363b9c7daa778]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/e5d39b28e9d04d37b49341ed41a227fa]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/bde89b23e7db4820bd6e03720a0a2f28]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/ab69247ab526429ba2cd9866e2fe33c8]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/6b82cc5d28304c0fb3df0706bd02ff20]
+vm-window-size=(800, 607)
+
+[org/virt-manager/virt-manager/vms/1741f97dae1c41e381a274ea57a39097]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/38055cd28d51478f8a1c970196db4e56]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/347167f659de44f08e06fedf1fb3b2e8]
+vm-window-size=(1366, 768)
+scaling=2
+
+[org/virt-manager/virt-manager/vms/8d4ab345588f49d5ae1fe375c18ac918]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/e51a87765cf641f5809ee84da8adf898]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/65fa0b47e646421aa9b6d545399fb510]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/0a2bf1fc770f4e46b8070c737ca71134]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/546935c1a69949f9ac50d7d78d509a72]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/b7718c67a03c409b87f53d1c1157af16]
+vm-window-size=(780, 865)
+
+[org/virt-manager/virt-manager/vms/1b02d3c72dd54b8cb742e5a2792965c4]
+vm-window-size=(1366, 742)
+
+[org/virt-manager/virt-manager/vms/eb3408fb706c47f0809e61bd1d22a26f]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/385bc364f25340fc809308c3d9bf97df]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/c618c19979704429a5066c670ce3f346]
+vm-window-size=(1366, 740)
+
+[org/virt-manager/virt-manager/vms/69308a278d7c4ced938656ad585cfbcf]
+vm-window-size=(800, 600)
+
+[org/virt-manager/virt-manager/vms/c51220a7557c4defbde38df195e79c75]
+vm-window-size=(804, 576)
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system', 'qemu+tcp://lenovolobato.no-ip.net/system']
+uris=['qemu+tcp://lenovolobato.no-ip.net/system', 'qemu:///system']
+
+[org/virt-manager/virt-manager/urls]
+isos=['/images/turnkey-openldap-13.0-wheezy-amd64.iso', '/run/media/daniel/a1f084be-d79d-4120-a3c6-1bd3ff8369b4/Images/CentOS-7.0-1406-x86_64-Minimal.iso', '/run/media/daniel/a1f084be-d79d-4120-a3c6-1bd3ff8369b4/Images/Fedora-Cloud-Atomic-20141203-21.x86_64.raw', '/run/media/daniel/a1f084be-d79d-4120-a3c6-1bd3ff8369b4/Libvirt/centos64_vagrant_box_image.img', '/home/daniel/Downloads/CentOS-6.5-x86_64-minimal/CentOS-6.5-x86_64-minimal.iso']
+
+[org/yorba/shotwell/preferences/ui]
+sidebar-position=240
+display-basic-properties=true
+display-sidebar=true
+show-welcome-dialog=false
+events-sort-ascending=false
+
+[org/yorba/shotwell/preferences/window]
+direct-maximize=false
+direct-height=1056
+direct-width=960
+library-height=718
+library-width=1024
+library-maximize=false
+
+[org/yorba/shotwell/crop-settings]
+last-crop-height=1
+last-crop-width=1
+last-crop-menu-choice=0
+
+[apps/seahorse/windows/key-manager]
+width=640
+height=476
+
+[apps/seahorse/listing]
+sidebar-width=148
+keyrings-selected=['secret-service://login']
+
+[ca/desrt/dconf-editor]
+window-is-fullscreen=false
+window-height=600
+window-width=800
+window-is-maximized=false
