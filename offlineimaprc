@@ -1,0 +1,49 @@
+[general]
+ui = ttyui
+accounts = eLobato
+pythonfile=~/.mutt/offlineimap.py
+fsync = False
+
+[Account eLobato]
+localrepository = eLobato-Local
+remoterepository = eLobato-Remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository eLobato-Local]
+type = Maildir
+localfolders = ~/.mail/gmail
+nametrans = lambda folder: {'Drafts':   '[Gmail]/Drafts',
+                            'Sent':     '[Gmail]/Sent Mail',
+                           }.get(folder, folder)
+
+
+[Repository eLobato-Remote]
+maxconnections = 1
+type = Gmail
+remoteuser = elobatocs@gmail.com
+# Put password in GNOME keyring first
+remotepasseval = keyring.get_password('gmail', 'personal')
+realdelete = yes
+nametrans = lambda folder: {'[Gmail]/Drafts':    'Drafts',
+                            '[Gmail]/Sent Mail': 'Sent',
+                           }.get(folder, folder)
+
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/All Mail',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Starred',
+                                             '[Gmail]/Spam',
+                                             'Travel',
+                                             'Personal',
+                                             'Receipts',
+                                             'Work',
+                                             'UC3M',
+                                             'UC3M Delegacion',
+                                             'UCI',
+                                             'Groupon',
+                                             'NYC-rb',
+                                             'OC-rb',
+                                             'OPW',
+                                             ]
+
