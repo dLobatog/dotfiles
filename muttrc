@@ -54,10 +54,21 @@ mailboxes +gmail/INBOX \
           +gmail/Atomic-devel \
           +gmail/Sent \
           +gmail/Drafts \
+          +redhat/INBOX \
+          +redhat/satellite-6 \
+          +redhat/satellite-dept \
+          +redhat/satellite-tech \
+          +redhat/app-infra \
+          +redhat/cm-dev \
+          +redhat/announce-list \
+          +redhat/memo-list \
+          +redhat/OPW \
+          +redhat/Sent \
+          +redhat/Drafts \
 
-# Other special folders.
-set mbox      = "+gmail/Archive"
-set postponed = "+gmail/Drafts"
+# Other special folders. (set in /accounts/gmail, accounts/redhat)
+#set mbox      = "+gmail/Archive"
+#set postponed = "+gmail/Drafts"
 
 # Index View Options ---------------------------------
 set date_format = "%m/%d"
@@ -90,8 +101,8 @@ macro index a "<limit>all\n" "show all messages (undo limit)"
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 
 # Sync email
-macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
+macro index og "<shell-escape>offlineimap -a eLobato<enter>" "run offlineimap to sync gmail"
+macro index or "<shell-escape>offlineimap -a redhat<enter>"  "run offlineimap to sync redhat"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
@@ -143,9 +154,9 @@ set forward_quote                    # include message in forwards
 set editor = "vim"                   # Use terminal Vim to compose email.
 
 # msmtp conf
-set from     = "elobatocs@gmail.com"
-set sendmail = "/usr/bin/msmtp -a elobatocs"
-set sendmail_wait = 0
+#set from     = "elobatocs@gmail.com"
+#set sendmail = "/usr/bin/msmtp -a elobatocs"
+#set sendmail_wait = 0
 unset record
 
 # Use notmuch for searching
@@ -160,5 +171,14 @@ set signature="~/.signature"
 # Set GPG properties
 source ~/.mutt/gpg.rc
 
+# Separate accounts
+source ~/.mutt/accounts/gmail
+source ~/.mutt/accounts/redhat
+folder-hook gmail/*      source ~/.mutt/accounts/gmail
+folder-hook redhat/*     source ~/.mutt/accounts/redhat
+
 # Urlview
 macro pager \cb <pipe-entry>'urlview'<enter>
+
+# Save attachments (works on attachments view (v))
+macro attach W <save-entry><kill-line>/home/daniel/.mail/attachments

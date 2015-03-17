@@ -1,12 +1,19 @@
 [general]
 ui = ttyui
-accounts = eLobato
+accounts = eLobato, redhat
 pythonfile=~/.mutt/offlineimap.py
 fsync = False
+maxsyncaccounts = 2
 
 [Account eLobato]
 localrepository = eLobato-Local
 remoterepository = eLobato-Remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Account redhat]
+localrepository = redhat-Local
+remoterepository = redhat-Remote
 status_backend = sqlite
 postsynchook = notmuch new
 
@@ -22,7 +29,6 @@ nametrans = lambda folder: {'Drafts':   '[Gmail]/Drafts',
 maxconnections = 1
 type = Gmail
 remoteuser = elobatocs@gmail.com
-# Put password in GNOME keyring first
 remotepasseval = keyring.get_password('gmail', 'personal')
 realdelete = yes
 nametrans = lambda folder: {'[Gmail]/Drafts':    'Drafts',
@@ -47,3 +53,16 @@ folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
                                              'OPW',
                                              ]
 
+[Repository redhat-Local]
+type = Maildir
+localfolders = ~/.mail/redhat
+
+[Repository redhat-Remote]
+type = IMAP
+remotehost = # Red Hat IMAP server ;)
+ssl = yes
+sslcacertfile = ~/workspace/RedHat/newca.crt
+remoteuser = dlobatog
+maxconnections = 1
+holdconnectionopen = yes
+folderfilter = lambda foldername: foldername not in ['Contacts', 'Emailed Contacts', 'Trash']

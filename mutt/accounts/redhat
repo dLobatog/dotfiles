@@ -1,0 +1,4 @@
+set from      = "dlobatog@redhat.com"
+set sendmail  = "/usr/bin/msmtp -a redhat"
+set mbox      = "+redhat/Archive"
+set postponed = "+redhat/Drafts"

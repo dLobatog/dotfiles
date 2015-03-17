@@ -1,0 +1,4 @@
+set from      = "elobatocs@gmail.com"
+set sendmail  = "/usr/bin/msmtp -a elobatocs"
+set mbox      = "+gmail/Archive"
+set postponed = "+gmail/Drafts"
