@@ -220,3 +220,6 @@ source '/home/daniel/google-cloud-sdk/completion.bash.inc'
 
 # Add rust LD library to path
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+
+# Google Calendar CLI aliases
+alias gcal=gcalcli

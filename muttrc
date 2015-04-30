@@ -1,7 +1,7 @@
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
 set alias_file       = ~/.mutt/alias         # where to store aliases
-#set header_cache     = ~/.mutt/cache/headers # where to store headers
+set header_cache     = ~/.mutt/cache/header  # where to store headers
 #set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 #set certificate_file = ~/.mutt/certificates  # where to store certs
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
@@ -21,9 +21,11 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
 # Sidebar Patch --------------------------------------
-set sidebar_delim   = '  │'
+set sidebar_delim   = '│'
 set sidebar_visible = yes
 set sidebar_width   = 38
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
 color sidebar_new color221 color233
 
 # Status Bar -----------------------------------------
@@ -56,12 +58,16 @@ mailboxes +gmail/INBOX \
           +gmail/Drafts \
           +redhat/INBOX \
           +redhat/satellite-6 \
+          +redhat/satellite-beta \
           +redhat/satellite-dept \
           +redhat/satellite-tech \
+          +redhat/bugzilla \
           +redhat/app-infra \
           +redhat/cm-dev \
+          +redhat/CFP \
           +redhat/announce-list \
           +redhat/memo-list \
+          +redhat/Madrid \
           +redhat/OPW \
           +redhat/Sent \
           +redhat/Drafts \
@@ -103,6 +109,7 @@ macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "ma
 # Sync email
 macro index og "<shell-escape>offlineimap -a eLobato<enter>" "run offlineimap to sync gmail"
 macro index or "<shell-escape>offlineimap -a redhat<enter>"  "run offlineimap to sync redhat"
+macro index oo "<shell-escape>offlineimap<enter>"  "run offlineimap to sync all"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
@@ -117,7 +124,7 @@ bind index,pager <right>  sidebar-open
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show
 set pager_stop             # don't go to next message automatically
-set menu_scroll            # scroll in menus
+set menu_scroll = yes      # scroll in menus
 set tilde                  # show tildes like in vim
 unset markers              # no ugly plus signs
 
@@ -163,7 +170,8 @@ unset record
 macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>+temporary/search<enter>" "search mail (using notmuch)"
 
 # Solarized colors
-source /home/daniel/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+#source /home/daniel/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+source /home/daniel/.mutt/colors/vombatidae.mutt
 
 # Signature
 set signature="~/.signature"
