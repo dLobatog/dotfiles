@@ -206,3 +206,15 @@ let g:promptline_theme = 'airline'
 
 " Fix tmux arrows in insert mode
 map <ESC>oA <ESC>ki
+
+" Move between tabs with Alt j and Alt k
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+" Limit to 80 columns
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%101v', 100)
+
+" Configure vim-flay
+let g:flay_on_open=0
+let g:flay_piet_text="✗"
