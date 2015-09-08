@@ -3,7 +3,8 @@ set encoding=utf-8
 set hlsearch
 set noswapfile
 
-" Displays line numbers
+" Displays line numbers and relativenumber
+set relativenumber
 set number
 
 " My colorscheme
