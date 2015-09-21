@@ -3,8 +3,7 @@ set encoding=utf-8
 set hlsearch
 set noswapfile
 
-" Displays line numbers and relativenumber
-set relativenumber
+" Displays line numbers
 set number
 
 " My colorscheme
@@ -219,3 +218,6 @@ call matchadd('ColorColumn', '\%101v', 100)
 " Configure vim-flay
 let g:flay_on_open=0
 let g:flay_piet_text="✗"
+
+" Autowrap commit messages to 72 columns
+autocmd Filetype gitcommit setlocal spell textwidth=72
