@@ -131,24 +131,18 @@ alias gcl='git clone'
 alias gcp='git cherry-pick'
 alias git-last-commit="git log | head -1 | cut -d ' ' -f2 | xclip -selection clipboard"
 alias glc="git-last-commit"
+alias grc="git rebase --continue"
+alias grs="git rebase --skip"
 
-# Vim alias
+# Other tool aliases
 alias v="vim"
-
-# Zeus alias
+alias c="cat"
+alias r="rake"
 alias z="zeus"
-
-# Spring alias
 alias sp="bin/spring"
-
-# SML repl alias
 alias sml="rlwrap sml"
-# Ocaml repl alias
 alias ocaml="rlwrap ocaml"
-# SCHEME repl alias
 alias mit-scheme="rlwrap mit-scheme-x86-64"
-
-# Clojure repl
 alias clojure_repl='lein repl'
 
 # Load clojure
@@ -198,10 +192,12 @@ alias redhat-computing="ssh dlobatog@file.mad.redhat.com"
 alias rp="rails server Puma"
 alias rs="rails server"
 alias rc="rails console"
+alias rt="rake test"
 alias bu="bundle update"
 alias bi="bundle install"
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
+export VAGRANT_HOME=/run/media/daniel/Lobato-ext/vagrant_home
 . ~/.bashrc_vagrant.sh
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/daniel/workspace/etcd-v0.4.6-linux-amd64
@@ -212,14 +208,14 @@ source ~/.shell_prompt.sh
 # Disable GNOME asking for ssh credentials
 unset SSH_ASKPASS
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/home/daniel/google-cloud-sdk/path.bash.inc'
-
-# The next line enables bash completion for gcloud.
-source '/home/daniel/google-cloud-sdk/completion.bash.inc'
-
 # Add rust LD library to path
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 # Google Calendar CLI aliases
 alias gcal=gcalcli
+
+# Default build clojurescript
+alias cljs-build="java -cp cljs.jar:src clojure.main"
+
+# default uri for virsh commands
+export LIBVIRT_DEFAULT_URI=qemu:///system
