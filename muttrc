@@ -21,12 +21,17 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
 # Sidebar Patch --------------------------------------
-set sidebar_delim   = '│'
+set mail_check_stats
+set sidebar_divider_char = '│'
+set sidebar_format = "%B%* %N:%S"
 set sidebar_visible = yes
 set sidebar_width   = 38
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
+macro index b '<sidebar-toggle-visible>'
+macro pager b '<sidebar-toggle-visible>'
+macro index B '<sidebar-toggle-virtual>'
+macro pager B '<sidebar-toggle-virtual>'
 color sidebar_new color221 color233
+color sidebar_indicator color221 color234
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -48,29 +53,45 @@ alternates me@daniellobato.me
 
 # Mailboxes to show in the sidebar.
 mailboxes +gmail/INBOX \
+          +gmail/REPLYQ \
+          +gmail/Piazza \
           +gmail/Foreman-DEV \
           +gmail/Foreman-USERS \
-          +gmail/Foreman-Github \
+          +gmail/Foreman-Ansible\
+          +gmail/Foreman-Core \
+          +gmail/Foreman-Cockpit \
+          +gmail/Foreman-Discovery \
+          +gmail/Foreman-Docker \
+          +gmail/Foreman-Packaging \
+          +gmail/Foreman-RFC \
+          +gmail/Foreman-Web \
+          +gmail/npm2rpm \
+          +gmail/GitHub \
           +gmail/Foreman-Redmine \
-          +gmail/Ruby-core \
-          +gmail/Atomic-devel \
           +gmail/Sent \
           +gmail/Drafts \
           +redhat/INBOX \
-          +redhat/satellite-6 \
-          +redhat/satellite-beta \
-          +redhat/satellite-dept \
-          +redhat/satellite-tech \
+          +redhat/REPLYQ \
           +redhat/bugzilla \
-          +redhat/app-infra \
-          +redhat/cm-dev \
-          +redhat/CFP \
+          +redhat/satellite-6 \
+          +redhat/satellite-dept \
+          +redhat/satellite6-leads \
+          +redhat/Cloud\ Strategy \
+          +redhat/DevOps\ Strategy \
+          +redhat/Madrid \
           +redhat/announce-list \
           +redhat/memo-list \
-          +redhat/Madrid \
-          +redhat/OPW \
           +redhat/Sent \
           +redhat/Drafts \
+#          +gmail/Foreman-Proxy \
+#          +gmail/Foreman-Puppet \
+#          +gmail/Foreman-REX \
+#          +redhat/emea-sat6-sme\
+
+# Notmuch patch ---------------------------------
+set nm_default_uri = "notmuch:///home/daniel/.mail"
+virtual-mailboxes "Recent mail!" "notmuch://?query=date:"yesterday".."today" tag:unread -from:bugzilla@redhat.com -to:cm-dev@redhat.com -to:satellite-doc-list@redhat.com -to:memo-list@redhat.com -to:cloud-strategy@redhat.com -cc:cm-dev@redhat.com -cc:memo-list@redhat.com -cc:cloud-strategy@redhat.com -cc:satellite-doc-list@redhat.com"
+virtual-mailboxes "Bugzillas" "notmuch://?query=from:bugzilla@redhat.com date:"yesterday".."today" tag:unread"
 
 # Other special folders. (set in /accounts/gmail, accounts/redhat)
 #set mbox      = "+gmail/Archive"
@@ -184,9 +205,15 @@ source ~/.mutt/accounts/gmail
 source ~/.mutt/accounts/redhat
 folder-hook gmail/*      source ~/.mutt/accounts/gmail
 folder-hook redhat/*     source ~/.mutt/accounts/redhat
+folder-hook .            "push <collapse-all>\n"
 
 # Urlview
 macro pager \cb <pipe-entry>'urlview'<enter>
 
 # Save attachments (works on attachments view (v))
 macro attach W <save-entry><kill-line>/home/daniel/.mail/attachments
+set sleep_time = 0
+
+# Move to reply queue
+macro index 1 <copy-message>/home/daniel/.mail/gmail/REPLYQ
+macro index 2 <copy-message>/home/daniel/.mail/redhat/REPLYQ

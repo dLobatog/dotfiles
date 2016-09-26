@@ -196,6 +196,9 @@ alias rt="rake test"
 alias bu="bundle update"
 alias bi="bundle install"
 
+# NPM alias
+alias ni="npm install"
+
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 export VAGRANT_HOME=/run/media/daniel/Lobato-ext/vagrant_home
 . ~/.bashrc_vagrant.sh
@@ -219,3 +222,16 @@ alias cljs-build="java -cp cljs.jar:src clojure.main"
 
 # default uri for virsh commands
 export LIBVIRT_DEFAULT_URI=qemu:///system
+
+# Weather aliases
+alias weather="curl -4 wttr.in/Madrid"
+
+alias srg="sr google"
+
+export SURFRAW_graphical=no
+export SURFRAW_text_browser=/usr/bin/links
+
+alias wpd='./node_modules/.bin/webpack-dev-server --config config/webpack.config.js'
+alias be='bundle exec'
+# Check C code matches linux kernel standard
+alias lcp='~/workspace/linux/scripts/checkpatch.pl --terse -f'
