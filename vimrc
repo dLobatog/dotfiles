@@ -213,7 +213,7 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " Limit to 80 columns
 highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%101v', 100)
+call matchadd('ColorColumn', '\%101v', 80)
 
 " Configure vim-flay
 let g:flay_on_open=0
@@ -221,3 +221,41 @@ let g:flay_piet_text="✗"
 
 " Autowrap commit messages to 72 columns
 autocmd Filetype gitcommit setlocal spell textwidth=72
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+let g:syntastic_javascript_checkers = ['eslint']
+
+
+" Misc File types.
+augroup misc_filetypes
+  autocmd!
+  autocmd BufNewFile,BufRead Guardfile,.Guardfile,Vagrantfile set filetype=ruby
+augroup end
+
+" Clojure Rainbow parents
+
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+      \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+      \   'operators': '_,_',
+      \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+      \   'separately': {
+      \       '*': {},
+      \       'tex': {
+      \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+      \       },
+      \       'lisp': {
+      \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+      \       },
+      \       'vim': {
+      \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+      \       },
+      \       'html': {
+      \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+      \       },
+      \       'css': 0,
+      \   }
+      \}
+
+" Make C code follow the Linux Kernel standard
+let g:linuxsty_patterns = [ "/home/daniel/workspace/"]
