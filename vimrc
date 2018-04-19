@@ -223,7 +223,11 @@ let g:flay_piet_text="✗"
 autocmd Filetype gitcommit setlocal spell textwidth=72
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 let g:syntastic_javascript_checkers = ['eslint']
-
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_h_compiler = 'clang++'
+let g:syntastic_h_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_python_checkers = ['flake8']
 
 " Misc File types.
 augroup misc_filetypes
@@ -259,3 +263,35 @@ let g:rainbow_conf = {
 
 " Make C code follow the Linux Kernel standard
 let g:linuxsty_patterns = [ "/home/daniel/workspace/"]
+
+
+
+function! DoPrettyXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  " xmllint will insert an <?xml?> header. it's easy enough to delete
+  " if you don't want it.
+  " delete the fake tags
+  2d
+  $d
+  " restore the 'normal' indentation, which is one extra level
+  " too deep due to the extra tags we wrapped around the document.
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+command! PrettyXML call DoPrettyXML()
+

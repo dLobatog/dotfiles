@@ -133,6 +133,8 @@ alias git-last-commit="git log | head -1 | cut -d ' ' -f2 | xclip -selection cli
 alias glc="git-last-commit"
 alias grc="git rebase --continue"
 alias grs="git rebase --skip"
+alias gpud="gpu --rebase upstream develop"
+alias gpum="gpu --rebase upstream master"
 
 # Other tool aliases
 alias v="vim"
@@ -150,7 +152,7 @@ export CLASSPATH=/home/daniel/.clojure/clojure.jar
 
 # Vim color support
 TERM=xterm-256color
-set t_Co=256
+#set t_Co=256
 # but change it to screen-256color if in tmux
 [ -n "$TMUX" ] && export TERM=screen-256color
 
@@ -185,7 +187,7 @@ PATH=$PATH:$HOME/.lein/bin
 eval "$(hub alias -s)"
 
 # Lenovo server
-alias lenovo="ssh lenovolobato.no-ip.net"
+alias toshiba="ssh daniel@toshibalobato.myddns.me"
 alias redhat-computing="ssh dlobatog@file.mad.redhat.com"
 
 # Rails aliases
@@ -200,7 +202,8 @@ alias bi="bundle install"
 alias ni="npm install"
 
 export VAGRANT_DEFAULT_PROVIDER=libvirt
-export VAGRANT_HOME=/run/media/daniel/Lobato-ext/vagrant_home
+# Vagrant home in the external HD
+#export VAGRANT_HOME=/run/media/daniel/Lobato-ext/vagrant_home
 . ~/.bashrc_vagrant.sh
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/daniel/workspace/etcd-v0.4.6-linux-amd64
@@ -235,3 +238,29 @@ alias wpd='./node_modules/.bin/webpack-dev-server --config config/webpack.config
 alias be='bundle exec'
 # Check C code matches linux kernel standard
 alias lcp='~/workspace/linux/scripts/checkpatch.pl --terse -f'
+alias wp='./node_modules/.bin/webpack-dev-server --config config/webpack.config.js $WEBPACK_OPTS'
+alias mutt='neomutt'
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+# because usually the rest of the OS is in jp_JP and some errors are quite cryptic
+#export LANG="ja_JP.UTF-8"
+alias satlab="ssh root@mandy-rheaves.sat.lab.tlv.redhat.com"
+source ~/.rbenv/completions/rbenv.bash
+
+export FOREMAN_URL=https://centos7-devel.lobatolan.home
+export FOREMAN_SSL_CERT=/home/dlobatog/workspace/ansible-demo/katello-default-ca.crt
+export FOREMAN_SSL_KEY=/home/dlobatog/workspace/ansible-demo/katello-default-ca.key
+export FOREMAN_SSL_VERIFY=False
+
+# Make bash history longer
+shopt -s histappend
+shopt -s cmdhist
+export HISTFILESIZE=1000000
+export HISTSIZE=100000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='history'
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/dlobatog/.anaconda3/bin:$PATH"
+#source ~/.aws-alias.sh
+#source ~/workspace/nvm/nvm.sh
