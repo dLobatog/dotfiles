@@ -98,13 +98,13 @@ let s:cube_dict = {
 \   'xterm88'   : insert(range(0x5F, 0xFF, 80), 0),
 \   'konsole'   : range(0x00, 0xFF, 0x33),
 \   'eterm'     : [0x00, 0x2A, 0x55, 0x7F, 0xAA, 0xD4],
-\   'none'      : []
+\   'NONE'      : []
 \ }
 
 let s:grey_dict = {
 \   'xterm256'  : range(0x08, 0xFF, 10)[:23],
 \   'xterm88'   : range(0x1C, 0xFF, 30),
-\   'none'      : []
+\   'NONE'      : []
 \ }
 
 let s:rgbs_dict = {
@@ -133,8 +133,8 @@ elseif &t_Co == 88
     let s:cube_dflt = 'xterm88'
     let s:grey_dflt = 'xterm88'
 else
-    let s:cube_dflt = 'none'
-    let s:grey_dflt = 'none'
+    let s:cube_dflt = 'NONE'
+    let s:grey_dflt = 'NONE'
 endif
 
 let s:rgbs_dflt = 'unix'
@@ -346,91 +346,91 @@ command! -nargs=* -bang -complete=highlight
 " default highlights {{{--------------------------------------------------------
 " From hard-coded vim source file
 function! s:hl_dflt_light()
-    Highlight SpecialKey    gui=none        guifg=Blue      guibg=none
-    Highlight NonText       gui=bold        guifg=Blue      guibg=none
-    Highlight Directory     gui=none        guifg=Blue      guibg=none
-    Highlight ErrorMsg      gui=none        guifg=White     guibg=Red
-    Highlight IncSearch     gui=reverse     guifg=none      guibg=none
-    Highlight Search        gui=none        guifg=none      guibg=Yellow
-    Highlight MoreMsg       gui=bold        guifg=SeaGreen  guibg=none
-    Highlight ModeMsg       gui=bold        guifg=none      guibg=none
-    Highlight LineNr        gui=none        guifg=Brown     guibg=none
-    Highlight Question      gui=bold        guifg=SeaGreen  guibg=none
-    Highlight StatusLine    gui=bold,reverse    guifg=none  guibg=none
-    Highlight StatusLineNC  gui=reverse     guifg=none      guibg=none
-    Highlight VertSplit     gui=reverse     guifg=none      guibg=none
-    Highlight Title         gui=bold        guifg=Magenta   guibg=none
-    Highlight Visual        gui=none        guifg=none      guibg=LightGrey
-    Highlight VisualNOS     gui=bold,underline  guifg=none  guibg=none
-    Highlight WarningMsg    gui=none        guifg=Red       guibg=none
-    Highlight WildMenu      gui=none        guifg=Black     guibg=Yellow
-    Highlight Folded        gui=none        guifg=DarkBlue  guibg=LightGrey
-    Highlight FoldColumn    gui=none        guifg=DarkBlue  guibg=Grey
-    Highlight DiffAdd       gui=none        guifg=none      guibg=LightBlue
-    Highlight DiffChange    gui=none        guifg=none      guibg=LightMagenta
+    Highlight SpecialKey    gui=NONE        guifg=Blue      guibg=NONE
+    Highlight NonText       gui=bold        guifg=Blue      guibg=NONE
+    Highlight Directory     gui=NONE        guifg=Blue      guibg=NONE
+    Highlight ErrorMsg      gui=NONE        guifg=White     guibg=Red
+    Highlight IncSearch     gui=reverse     guifg=NONE      guibg=NONE
+    Highlight Search        gui=NONE        guifg=NONE      guibg=Yellow
+    Highlight MoreMsg       gui=bold        guifg=SeaGreen  guibg=NONE
+    Highlight ModeMsg       gui=bold        guifg=NONE      guibg=NONE
+    Highlight LineNr        gui=NONE        guifg=Brown     guibg=NONE
+    Highlight Question      gui=bold        guifg=SeaGreen  guibg=NONE
+    Highlight StatusLine    gui=bold,reverse    guifg=NONE  guibg=NONE
+    Highlight StatusLineNC  gui=reverse     guifg=NONE      guibg=NONE
+    Highlight VertSplit     gui=reverse     guifg=NONE      guibg=NONE
+    Highlight Title         gui=bold        guifg=Magenta   guibg=NONE
+    Highlight Visual        gui=NONE        guifg=NONE      guibg=LightGrey
+    Highlight VisualNOS     gui=bold,underline  guifg=NONE  guibg=NONE
+    Highlight WarningMsg    gui=NONE        guifg=Red       guibg=NONE
+    Highlight WildMenu      gui=NONE        guifg=Black     guibg=Yellow
+    Highlight Folded        gui=NONE        guifg=DarkBlue  guibg=LightGrey
+    Highlight FoldColumn    gui=NONE        guifg=DarkBlue  guibg=Grey
+    Highlight DiffAdd       gui=NONE        guifg=NONE      guibg=LightBlue
+    Highlight DiffChange    gui=NONE        guifg=NONE      guibg=LightMagenta
     Highlight DiffDelete    gui=bold        guifg=Blue      guibg=LightCyan
-    Highlight DiffText      gui=bold        guifg=none      guibg=Red
-    Highlight SignColumn    gui=none        guifg=DarkBlue  guibg=Grey
-    Highlight SpellBad      gui=undercurl   guifg=none      guisp=Red
-    Highlight SpellCap      gui=undercurl   guifg=none      guisp=Blue
-    Highlight SpellRare     gui=undercurl   guifg=none      guisp=Magenta
-    Highlight SpellLocal    gui=undercurl   guifg=none      guisp=DarkCyan
-    Highlight Pmenu         gui=none        guifg=none      guibg=LightMagenta
-    Highlight PmenuSel      gui=none        guifg=none      guibg=Grey
-    Highlight PmenuSbar     gui=none        guifg=none      guibg=Grey
-    Highlight PmenuThumb    gui=reverse     guifg=none      guibg=none
-    Highlight TabLine       gui=underline   guifg=none      guibg=LightGrey
-    Highlight TabLineSel    gui=bold        guifg=none      guibg=none
-    Highlight TabLineFill   gui=reverse     guifg=none      guibg=none
-    Highlight CursorColumn  gui=none        guifg=none      guibg=Grey90
-    Highlight CursorLine    gui=none        guifg=none      guibg=Grey90
-    Highlight Cursor        gui=reverse     guifg=none      guibg=none
-    Highlight lCursor       gui=reverse     guifg=none      guibg=none
-    Highlight MatchParen    gui=none        guifg=none      guibg=Cyan
+    Highlight DiffText      gui=bold        guifg=NONE      guibg=Red
+    Highlight SignColumn    gui=NONE        guifg=DarkBlue  guibg=Grey
+    Highlight SpellBad      gui=undercurl   guifg=NONE      guisp=Red
+    Highlight SpellCap      gui=undercurl   guifg=NONE      guisp=Blue
+    Highlight SpellRare     gui=undercurl   guifg=NONE      guisp=Magenta
+    Highlight SpellLocal    gui=undercurl   guifg=NONE      guisp=DarkCyan
+    Highlight Pmenu         gui=NONE        guifg=NONE      guibg=LightMagenta
+    Highlight PmenuSel      gui=NONE        guifg=NONE      guibg=Grey
+    Highlight PmenuSbar     gui=NONE        guifg=NONE      guibg=Grey
+    Highlight PmenuThumb    gui=reverse     guifg=NONE      guibg=NONE
+    Highlight TabLine       gui=underline   guifg=NONE      guibg=LightGrey
+    Highlight TabLineSel    gui=bold        guifg=NONE      guibg=NONE
+    Highlight TabLineFill   gui=reverse     guifg=NONE      guibg=NONE
+    Highlight CursorColumn  gui=NONE        guifg=NONE      guibg=Grey90
+    Highlight CursorLine    gui=NONE        guifg=NONE      guibg=Grey90
+    Highlight Cursor        gui=reverse     guifg=NONE      guibg=NONE
+    Highlight lCursor       gui=reverse     guifg=NONE      guibg=NONE
+    Highlight MatchParen    gui=NONE        guifg=NONE      guibg=Cyan
 endfunction
 
 function! s:hl_dflt_dark()
-    Highlight SpecialKey    gui=none        guifg=Cyan      guibg=none
-    Highlight NonText       gui=bold        guifg=Blue      guibg=none
-    Highlight Directory     gui=none        guifg=Cyan      guibg=none
-    Highlight ErrorMsg      gui=none        guifg=White     guibg=Red
-    Highlight IncSearch     gui=reverse     guifg=none      guibg=none
-    Highlight Search        gui=none        guifg=Black     guibg=Yellow
-    Highlight MoreMsg       gui=bold        guifg=SeaGreen  guibg=none
-    Highlight ModeMsg       gui=bold        guifg=none      guibg=none
-    Highlight LineNr        gui=none        guifg=Yellow    guibg=none
-    Highlight Question      gui=bold        guifg=Green     guibg=none
-    Highlight StatusLine    gui=bold,reverse    guifg=none  guibg=none
-    Highlight StatusLineNC  gui=reverse     guifg=none      guibg=none
-    Highlight VertSplit     gui=reverse     guifg=none      guibg=none
-    Highlight Title         gui=bold        guifg=Magenta   guibg=none
-    Highlight Visual        gui=none        guifg=none      guibg=DarkGrey
-    Highlight VisualNOS     gui=bold,underline  guifg=none  guibg=none
-    Highlight WarningMsg    gui=none        guifg=Red       guibg=none
-    Highlight WildMenu      gui=none        guifg=Black     guibg=Yellow
-    Highlight Folded        gui=none        guifg=Cyan      guibg=DarkGrey
-    Highlight FoldColumn    gui=none        guifg=Cyan      guibg=Grey
-    Highlight DiffAdd       gui=none        guifg=none      guibg=DarkBlue
-    Highlight DiffChange    gui=none        guifg=none      guibg=DarkMagenta
+    Highlight SpecialKey    gui=NONE        guifg=Cyan      guibg=NONE
+    Highlight NonText       gui=bold        guifg=Blue      guibg=NONE
+    Highlight Directory     gui=NONE        guifg=Cyan      guibg=NONE
+    Highlight ErrorMsg      gui=NONE        guifg=White     guibg=Red
+    Highlight IncSearch     gui=reverse     guifg=NONE      guibg=NONE
+    Highlight Search        gui=NONE        guifg=Black     guibg=Yellow
+    Highlight MoreMsg       gui=bold        guifg=SeaGreen  guibg=NONE
+    Highlight ModeMsg       gui=bold        guifg=NONE      guibg=NONE
+    Highlight LineNr        gui=NONE        guifg=Yellow    guibg=NONE
+    Highlight Question      gui=bold        guifg=Green     guibg=NONE
+    Highlight StatusLine    gui=bold,reverse    guifg=NONE  guibg=NONE
+    Highlight StatusLineNC  gui=reverse     guifg=NONE      guibg=NONE
+    Highlight VertSplit     gui=reverse     guifg=NONE      guibg=NONE
+    Highlight Title         gui=bold        guifg=Magenta   guibg=NONE
+    Highlight Visual        gui=NONE        guifg=NONE      guibg=DarkGrey
+    Highlight VisualNOS     gui=bold,underline  guifg=NONE  guibg=NONE
+    Highlight WarningMsg    gui=NONE        guifg=Red       guibg=NONE
+    Highlight WildMenu      gui=NONE        guifg=Black     guibg=Yellow
+    Highlight Folded        gui=NONE        guifg=Cyan      guibg=DarkGrey
+    Highlight FoldColumn    gui=NONE        guifg=Cyan      guibg=Grey
+    Highlight DiffAdd       gui=NONE        guifg=NONE      guibg=DarkBlue
+    Highlight DiffChange    gui=NONE        guifg=NONE      guibg=DarkMagenta
     Highlight DiffDelete    gui=bold        guifg=Blue      guibg=DarkCyan
-    Highlight DiffText      gui=bold        guifg=none      guibg=Red
-    Highlight SignColumn    gui=none        guifg=Cyan      guibg=Grey
-    Highlight SpellBad      gui=undercurl   guifg=none      guisp=Red
-    Highlight SpellCap      gui=undercurl   guifg=none      guisp=Blue
-    Highlight SpellRare     gui=undercurl   guifg=none      guisp=Magenta
-    Highlight SpellLocal    gui=undercurl   guifg=none      guisp=Cyan
-    Highlight Pmenu         gui=none        guifg=none      guibg=Magenta
-    Highlight PmenuSel      gui=none        guifg=none      guibg=DarkGrey
-    Highlight PmenuSbar     gui=none        guifg=none      guibg=Grey
-    Highlight PmenuThumb    gui=reverse     guifg=none      guibg=none
-    Highlight TabLine       gui=underline   guifg=none      guibg=DarkGrey
-    Highlight TabLineSel    gui=bold        guifg=none      guibg=none
-    Highlight TabLineFill   gui=reverse     guifg=none      guibg=none
-    Highlight CursorColumn  gui=none        guifg=none      guibg=Grey40
-    Highlight CursorLine    gui=none        guifg=none      guibg=Grey40
-    Highlight Cursor        gui=reverse     guifg=none      guibg=none
-    Highlight lCursor       gui=reverse     guifg=none      guibg=none
-    Highlight MatchParen    gui=none        guifg=none      guibg=DarkCyan
+    Highlight DiffText      gui=bold        guifg=NONE      guibg=Red
+    Highlight SignColumn    gui=NONE        guifg=Cyan      guibg=Grey
+    Highlight SpellBad      gui=undercurl   guifg=NONE      guisp=Red
+    Highlight SpellCap      gui=undercurl   guifg=NONE      guisp=Blue
+    Highlight SpellRare     gui=undercurl   guifg=NONE      guisp=Magenta
+    Highlight SpellLocal    gui=undercurl   guifg=NONE      guisp=Cyan
+    Highlight Pmenu         gui=NONE        guifg=NONE      guibg=Magenta
+    Highlight PmenuSel      gui=NONE        guifg=NONE      guibg=DarkGrey
+    Highlight PmenuSbar     gui=NONE        guifg=NONE      guibg=Grey
+    Highlight PmenuThumb    gui=reverse     guifg=NONE      guibg=NONE
+    Highlight TabLine       gui=underline   guifg=NONE      guibg=DarkGrey
+    Highlight TabLineSel    gui=bold        guifg=NONE      guibg=NONE
+    Highlight TabLineFill   gui=reverse     guifg=NONE      guibg=NONE
+    Highlight CursorColumn  gui=NONE        guifg=NONE      guibg=Grey40
+    Highlight CursorLine    gui=NONE        guifg=NONE      guibg=Grey40
+    Highlight Cursor        gui=reverse     guifg=NONE      guibg=NONE
+    Highlight lCursor       gui=reverse     guifg=NONE      guibg=NONE
+    Highlight MatchParen    gui=NONE        guifg=NONE      guibg=DarkCyan
 endfunction
 "}}}
 

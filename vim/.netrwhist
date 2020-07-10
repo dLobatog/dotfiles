@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/daniel/workspace/foreman_remote_execution'
+let g:netrw_dirhist_2='/home/daniel/workspace/foreman_remote_execution/app'
+let g:netrw_dirhist_3='/home/daniel/workspace/foreman_remote_execution/app/views'
+let g:netrw_dirhist_4='/home/daniel/workspace/foreman_remote_execution/app/views/job_templates'
+let g:netrw_dirhist_5='/home/daniel/workspace/foreman_remote_execution/app'
+let g:netrw_dirhist_6='/home/daniel/workspace/foreman_remote_execution/app/lib'
+let g:netrw_dirhist_7='/home/daniel/workspace/foreman_remote_execution/app/lib/actions'
+let g:netrw_dirhist_8='/home/daniel/workspace/foreman_remote_execution/app/lib/actions/remote_execution'
+let g:netrw_dirhist_9='/home/daniel/workspace/foreman_remote_execution/app/views/job_invocations'

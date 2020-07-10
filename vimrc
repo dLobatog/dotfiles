@@ -115,18 +115,19 @@ map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
 
 " Formatting (some of these are for coding in C and C++)
-set ts=2  " Tabs are 2 spaces
-set shiftwidth=2  " Tabs under smart indent
-set nocp incsearch
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tcqr
-set cindent
-set autoindent
-set smarttab
-set expandtab
-set tabstop=2
-set softtabstop=2
+au BufNewFile,BufRead *.py
+      \ set ts=2  " Tabs are 2 spaces
+      \ set shiftwidth=2  " Tabs under smart indent
+      \ set nocp incsearch
+      \ set cinoptions=:0,p0,t0
+      \ set cinwords=if,else,while,do,for,switch,case
+      \ set formatoptions=tcqr
+      \ set cindent
+      \ set autoindent
+      \ set smarttab
+      \ set expandtab
+      \ set tabstop=2
+      \ set softtabstop=2
 
 
 " Visual
@@ -163,6 +164,28 @@ imap <C-v> <ESC>"+pa
 " Set omnicompletion for python
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+"python with virtualenv support
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
+
+" PEP8 indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 " Remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
@@ -295,3 +318,22 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 
+augroup gzip
+ autocmd!
+ autocmd BufReadPre,FileReadPre *.gz set bin
+ autocmd BufReadPost,FileReadPost   *.gz '[,']!gunzip
+ autocmd BufReadPost,FileReadPost   *.gz set nobin
+ autocmd BufReadPost,FileReadPost   *.gz execute ":doautocmd BufReadPost " . expand("%:r")
+ autocmd BufWritePost,FileWritePost *.gz !mv <afile> <afile>:r
+ autocmd BufWritePost,FileWritePost *.gz !gzip <afile>:r
+ autocmd FileAppendPre      *.gz !gunzip <afile>
+ autocmd FileAppendPre      *.gz !mv <afile>:r <afile>
+ autocmd FileAppendPost     *.gz !mv <afile> <afile>:r
+ autocmd FileAppendPost     *.gz !gzip <afile>:r
+augroup END
+
+autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab
+
+" Add pdb debugger
+map <silent> <leader>b oimport pdb; pdb.set_trace()<esc>
+map <silent> <leader>B Oimport pdb; pdb.set_trace()<esc>
